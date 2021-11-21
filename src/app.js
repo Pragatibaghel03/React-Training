@@ -1,28 +1,23 @@
 import React from 'react';
 import './app.css';
-import SiteHeader from './component/siteheader';
-import Status from './component/status';
-import PlayBlock from './component/playblock';
-import ResetButton from './component/resetbutton';
-
+import SiteHeader from './components/site-header';
+import Game from './components/game';
 
 
 export default class App extends React.Component{
 
+    
     render(){
-        return(
-            <div className="container">
-                <SiteHeader/>
-                <div className="Game">
-                    <Status/>
-                    <div className="PlayBox">
-                        <PlayBlock/>
-                    </div>
-                   <ResetButton/>
+        return (
+            <div className="app">
+                <SiteHeader title="Tic Tac Toe" color="purple" size={20} />
+        
+                <div className="container">
+                   <Game/>
+                   
                 </div>
             </div>
-
+        
         );
-
     }
 }
